@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="cal-display">
+          <div id="mini-display" class="userDisplay">0</div>
+          <input
+            id="full-display"
+            disabled
+            class="single-time-display"
+            type="text"
+            value=""
+          />
+        </div>
+
+        <div></div>
+
+        <button onclick="handleClear()" class="btns clear">AC</button>
+        <button onclick="handleDelete()" class="btns del">DE</button>
+        <button onclick="handleValues('%')" class="btns operator">%</button>
+        <button onclick="handleValues('/')" class="btns operator">/</button>
+
+        <div></div>
+        <div></div>
+
+        <button onclick="handleValues('7')" class="btns">7</button>
+        <button onclick="handleValues('8')" class="btns">8</button>
+        <button onclick="handleValues('9')" class="btns">9</button>
+        <button onclick="handleValues('*')" class="btns operator">*</button>
+
+        <div></div>
+        <div></div>
+
+        <button onclick="handleValues('4')" class="btns">4</button>
+        <button onclick="handleValues('5')" class="btns">5</button>
+        <button onclick="handleValues('6')" class="btns">6</button>
+        <button onclick="handleValues('+')" class="btns operator">+</button>
+
+        <div></div>
+        <div></div>
+
+        <button onclick="handleValues('1')" class="btns">1</button>
+        <button onclick="handleValues('2')" class="btns">2</button>
+        <button onclick="handleValues('3')" class="btns">3</button>
+        <button onclick="handleValues('-')" class="btns operator">-</button>
+
+        <div></div>
+        <div></div>
+
+        <button onclick="handleValues('0')" class="btns">0</button>
+        <button onclick="handleDecimal('.')" class="btns">.</button>
+        <button onclick="handleEqual()" class="btns equal">=</button>
+
+        <div></div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
