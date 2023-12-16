@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200;1,300;1,400&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+  --primary-bg-dark: #1f1e1e;
+  --secondary-bg-dark: #353434;
+  --ternary-bg-dark: #494949;
+  --main-theme: #00e67a;
+  --font-white: white;
+}
+
+body{
+  background-color: var(--primary-bg-dark);
+  color: var(--font-white);
+  overflow: hidden;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+h1{
+  text-align: center;
+}
+
+.todo-wrapper{
+  width: fit-content;
+  max-height: 80dvh;
+  overflow-y: auto;
+  background-color: var(--secondary-bg-dark);
+  padding: 3% 2%;
+  margin: 3% auto;
+  box-shadow: 0px 5px 7px var(--ternary-bg-dark);
+}
+
+/* Form input section */
+
+.todo-input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  border-bottom: 1px solid var(--ternary-bg-dark);
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.todo-input-items{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.todo-input-items label{
+  font-weight: bold;
+}
+
+.todo-input-items input{
+  width: 250px;
+  padding: 8px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.todo-input-items input:focus{
+  box-shadow: inset 4px 6px 15px lightgray;
+  outline: 2px solid var(--main-theme);
+}
+
+.primary-btn{
+  width: 80px;
+  background-color: var(--main-theme);
+  color: var(--font-white);
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.primary-btn:hover{
+  background-color: #00bf66;
+}
+
+/* Division btns section */
+
+.division-btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#todo-btn{
+  border-radius: 8px 2px 2px 8px;
+}
+
+#completed-btn{
+  border-radius: 2px 8px 8px 2px;
+}
+
+.secondary-btns{
+  width: 20%;
+  background-color: var(--ternary-bg-dark);
+  color: var(--font-white);
+  border: none;
+  border-radius: 8px;
+  margin: 25px 0px;
+  padding: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .1s linear;
+}
+
+.active{
+  background-color: var(--main-theme);
+  font-weight: bold;
+}
+
+/* Todo-list area */
+
+.no-record{
+  text-align: center;
+  word-spacing: 0.1rem;
+}
+
+.todo-list{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.todo-list-items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--ternary-bg-dark);
+  padding: 10px 25px;
+  /* border: 1px solid wheat; */
+  border-radius: 8px;
+  box-shadow: 0px 4px 7px rgb(44, 44, 44);
+}
+
+.list-details{
+  width: 90%;
+}
+
+.list-name{
+  color: var(--main-theme);
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.list-desc,
+.list-time{
+  color: lightgray;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  font-weight: 300;
+}
+
+.action-btns{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.del-icon{
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.del-icon:hover{
+  color: red;
+}
+
+.edit-icon{
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.edit-icon:hover{
+  color: aqua;
+}
+
+.check-icon{
+  font-size: 1.4rem;
+  color: var(--main-theme);
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.check-icon:hover{
+  color: #01a056;
+}
+
+@media screen and (max-width: 700px) {
+  .todo-input{
+    flex-direction: column;
+  }
+  .primary-btn{
+    width: 250px;
+  }
+  .secondary-btns{
+    width: 80%;
+  }
+}
