@@ -3,7 +3,7 @@ import "./App.css";
 import { MdDelete } from "react-icons/md";
 import { FaCheck } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2';
 
 
 function App() {
@@ -14,17 +14,17 @@ function App() {
   const [completedTodos, setCompletedTodos] = useState([]);
   const [editMode, setEditMode] = useState(false);
   const [idToEdit, setIdToEdit] = useState(-1);
-  const Swal = require('sweetalert2')
+  // const Swal = require('sweetalert2')
 
   // Add new to-do task
 
   const handleAddTodo = () => {
     if (newTitle === "") {
-      Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "Please add title to your list!",
-      });
+      // Swal.fire({
+      //   icon: "error",
+      //   title: "Oops...",
+      //   text: "Please add title to your list!",
+      // });
       return;
     }
 

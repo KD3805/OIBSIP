@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,200;1,300&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: url(./Components/Assets/login-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  /* animation: animateBG 3s linear infinite; */
+}
+
+.home-body{
+  background: url(./Components/Assets/home.avif) no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  object-fit: cover !important;
+}
+
+@keyframes animateBG {
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+
+/* Home page */
+
+.home-container{
+  width: fit-content;
+  padding: 3.5vmax;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  border: 1px solid gray;
+  border-radius: 14px;
+}
+
+.greeting{
+  font-size: 2rem;
+}
+
+.user-detail {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.user-detail td{
+  padding: 5px 30px 5px 0;
+}
+
+.user-detail tr td:nth-child(odd){
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-align: left;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 8px;
+  border-right: 2px solid gray;
+}
+
+.user-detail tr td input{
+  color: aqua;
+  background: transparent;
+  font-size: large;
+  text-align: left;
+  padding-left: 30px;
+  border: none;
+  cursor: auto;
+}
+
+.user-detail tr td input:focus{
+  outline: none;
+}
+
+.home-page-icons{
+  font-size: 1.7rem;
+}
+
+
+/* Login/signup page */
+
+.login-box,
+.signup-box{
+  position: relative;
+  width: 450px;
+  height: auto;
+  padding: 3.5vmax;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .3);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(15px);
+}
+
+.signup-box{
+  height: auto;
+  padding: 3.5vmax;
+}
+
+.title{
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.form-details{
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.input-box{
+  position: relative;
+  width: 310px;
+  border-bottom: 2px solid #fff;
+}
+
+.input-box label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label
+{
+  top: -5px;
+}
+
+.input-box input{
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #fff;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+  position: absolute;
+  right: 8px;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 57px;
+}
+
+.err-msg{
+  width: 310px;
+  margin: 10px 0;
+  text-align: left;
+  /* display: block; */
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: red !important;
+  transition: all 0.5s ease-in-out;
+}
+
+button{
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+  background: #fff;
+  color: #000;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:disabled{
+  background-color: gray !important;
+}
+
+.register-link{
+  font-size: .9rem;
+  color: #fff;
+  text-align: center;
+  margin: 25px 0 10px;
+}
+
+.register-link p a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover{
+  text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 512px) {
+  .home-container
+  {
+    width: 100vw;
+    height: 100vh;
+    background: url(./Components/Assets/home.avif) no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    border: none;
+    align-items: start;
+  }
+  button{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .login-box,
+  .signup-box
+  {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    border-radius: 0;
+  }
+
+  .input-box,
+  .err-msg
+  {
+    width: 280px;
+  }
+}
